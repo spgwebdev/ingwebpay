@@ -16,7 +16,7 @@ to your `composer.json` file:
 
 ```json
 {
-     "repositories": [
+    "repositories": [
         {
             "type": "vcs",
             "url": "https://github.com/spgwebdev/ingwebpay"
