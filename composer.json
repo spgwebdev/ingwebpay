@@ -10,6 +10,7 @@
         "ingwebpay",
         "payment"
     ],
+    "minimum-stability" : "dev",
     "homepage": "https://github.com/spgwebdev/ingwebpay",
     "license": "MIT",
     "authors": [
