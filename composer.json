@@ -1,0 +1,35 @@
+{
+    "name": "spgwebdev/ingwebpay",
+    "type": "library",
+    "description": "Ingwebpay driver for the Omnipay payment processing library",
+    "keywords": [
+        "gateway",
+        "merchant",
+        "omnipay",
+        "pay",
+        "ingwebpay",
+        "payment"
+    ],
+    "homepage": "https://github.com/spgwebdev/ingwebpay",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ciprian OPREA",
+            "email": "ciprian.oprea@prestimedia.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Omnipay\\IngWebPay\\" : "src/" }
+    },
+    "require": {
+        "omnipay/common": "~3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
