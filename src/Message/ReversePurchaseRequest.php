@@ -23,7 +23,7 @@ class ReversePurchaseRequest extends CommonRequest
 
         $data = array();
 
-        $data['orderID'] = $this->getOrderId();
+        $data['orderId'] = $this->getOrderId();
         $data['userName'] = $this->getUserName();
         $data['password'] = $this->getPassword();
 
