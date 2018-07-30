@@ -41,7 +41,7 @@ class PurchaseResponse extends AbstractResponse implements RedirectResponseInter
      */
     public function isSuccessful(): bool
     {
-        return $this->dataResponse->errorCode == 0;
+        return !isset($this->dataResponse->errorCode) ?: $this->dataResponse->errorCode == 0 ;
     }
 
     /**
