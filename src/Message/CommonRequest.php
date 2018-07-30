@@ -56,7 +56,7 @@ abstract class CommonRequest extends AbstractRequest
     public function sendTo(string $url, array $data)
     {
         $headers = array(
-            'Content-Type' => 'text/json; charset=utf-8'
+            'Content-Type' => 'application/x-www-form-urlencoded'
         );
         $body = $data ? http_build_query($data, '', '&') : null;
         $httpResponse = $this->httpClient->request($this->getHttpMethod(), $url, $headers, $body);
