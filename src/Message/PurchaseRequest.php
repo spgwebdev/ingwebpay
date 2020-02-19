@@ -28,6 +28,8 @@ class PurchaseRequest extends CommonRequest
         $data['language'] = $this->getLanguage();
         $data['email'] = $this->getEmail();
         $data['amount'] = $this->getAmount();
+        $data['jsonParams'] = $this->getJsonParams();
+        $data['orderBundle'] = $this->getOrderBundle();
 
         return $data;
     }

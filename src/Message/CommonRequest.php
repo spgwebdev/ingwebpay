@@ -235,12 +235,42 @@ abstract class CommonRequest extends AbstractRequest
 
     /**
      *
+     * @return json string
+     */
+    public function getJsonParams(): string
+    {
+        return json_encode([
+            "FORCE_3DS2" => "true"
+        ]);
+    }
+
+    /**
+     *
+     * @return json string
+     */
+    public function getOrderBundle(): string
+    {
+        return json_encode($this->getParameter('orderBundle')) ?: '';
+    }
+
+    /**
+     *
      * @param float $value
      * @return type
      */
     public function setAmount($value)
     {
         return $this->setParameter('amount', $value);
+    }
+    
+     /**
+         *
+         * @param float $value
+         * @return type
+         */
+    public function setOrderBundle($value)
+    {
+        return $this->setParameter('orderBundle', $value);
     }
 
     /**
