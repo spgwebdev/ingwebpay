@@ -16,7 +16,7 @@ class PurchaseRequest extends CommonRequest
      */
     public function getData(): array
     {
-        $this->validate('amount', 'orderNumber');
+        $this->validate('amount');
 
         $data = [];
         $data['userName'] = $this->getUserName();
@@ -24,6 +24,7 @@ class PurchaseRequest extends CommonRequest
         $data['returnUrl'] = $this->getReturnUrl();
         $data['currency'] = $this->getCurrency();
         $data['orderNumber'] = $this->getOrderNumber();
+        $data['getReconciliationId'] = $this->getReconciliationId();
         $data['description'] = $this->getDescription();
         $data['language'] = $this->getLanguage();
         $data['email'] = $this->getEmail();
