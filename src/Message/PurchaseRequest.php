@@ -24,7 +24,7 @@ class PurchaseRequest extends CommonRequest
         $data['returnUrl'] = $this->getReturnUrl();
         $data['currency'] = $this->getCurrency();
         $data['orderNumber'] = $this->getOrderNumber();
-        $data['getReconciliationId'] = $this->getReconciliationId();
+        $data['reconciliationId'] = $this->getReconciliationId();
         $data['description'] = $this->getDescription();
         $data['language'] = $this->getLanguage();
         $data['email'] = $this->getEmail();
