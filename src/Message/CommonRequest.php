@@ -126,7 +126,7 @@ abstract class CommonRequest extends AbstractRequest
      *
      * @return string
      */
-    public function getOrderNumber(): string
+    public function getOrderNumber(): ?string
     {
         return $this->getParameter('orderNumber');
     }
@@ -158,6 +158,25 @@ abstract class CommonRequest extends AbstractRequest
     public function setOrderId(string $value)
     {
         return $this->setParameter('orderId', $value);
+    }
+
+    /**
+     *
+     * @return string
+     */
+    public function getReconciliationId(): ?string
+    {
+        return $this->getParameter('reconciliationId');
+    }
+
+    /**
+     *
+     * @param string $value
+     * @return type
+     */
+    public function setReconciliationId(string $value)
+    {
+        return $this->setParameter('reconciliationId', $value);
     }
 
     /**
@@ -239,9 +258,9 @@ abstract class CommonRequest extends AbstractRequest
      */
     public function getJsonParams(): string
     {
-        return json_encode([
-            "FORCE_3DS2" => "true"
-        ]);
+        return json_encode($this->getParameter('jsonParams') ?? [
+                "FORCE_3DS2" => "true"
+            ]);
     }
 
     /**
@@ -250,7 +269,7 @@ abstract class CommonRequest extends AbstractRequest
      */
     public function getOrderBundle(): string
     {
-        return json_encode($this->getParameter('orderBundle')) ?: '';
+        return json_encode($this->getParameter('orderBundle') ?: []);
     }
 
     /**
@@ -262,12 +281,22 @@ abstract class CommonRequest extends AbstractRequest
     {
         return $this->setParameter('amount', $value);
     }
-    
-     /**
-         *
-         * @param float $value
-         * @return type
-         */
+
+    /**
+     *
+     * @param float $value
+     * @return type
+     */
+    public function setJsonParams($value)
+    {
+        return $this->setParameter('jsonParams', $value);
+    }
+
+    /**
+     *
+     * @param float $value
+     * @return type
+     */
     public function setOrderBundle($value)
     {
         return $this->setParameter('orderBundle', $value);
