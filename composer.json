@@ -16,7 +16,7 @@
     "authors": [
         {
             "name": "Ciprian OPREA",
-            "email": "ciprian.oprea@prestimedia.com"
+            "email": "ciprian.oprea@interactively.ceu"
         },
         {
             "name": "Maria Petrescu",
@@ -27,7 +27,7 @@
         "psr-4": { "Omnipay\\IngWebPay\\" : "src/" }
     },
     "require": {
-        "php": "^7",
+        "php": "^7|^8",
         "omnipay/common": "~3.0"
     },
     "require-dev": {
